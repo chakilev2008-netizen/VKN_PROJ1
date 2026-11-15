@@ -1,0 +1,44 @@
+/* КРИТЕРИЙ 1: внешний файл стилей — цвет заголовков и фона ВСЕХ страниц */
+
+h1, h2, h3 {
+    color: #1a5276;              /* цвет заголовков */
+}
+
+body {
+    background-color: #eef4f8;   /* цвет фона страниц */
+}
+
+/* Общий вид */
+.logo img { width: 60px; }
+nav a { margin-right: 15px; }
+
+/* КРИТЕРИЙ 5: картинка слева — текст обтекает её справа */
+.floatleft {
+    float: left;
+    margin: 0 15px 10px 0;
+    width: 300px;
+}
+
+/* КРИТЕРИЙ 7: фоновая картинка только на главной */
+body.home {
+    background-image: url('images/bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*КРИТЕРИЙ 3: анимация*/
+@keyframes pulse {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+.animated {
+    animation: pulse 2s infinite;
+}
+@keyframes slidein {
+    from { transform: translateX(-50px); opacity: 0; }
+    to   { transform: translateX(0); opacity: 1; }
+}
+.slidein {
+    animation: slidein 1.5s ease-out;
+}
